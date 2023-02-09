@@ -3,7 +3,7 @@ pipeline {
    stages {
        stage('Build Code') {
            steps {
-               echo "env.BRANCH_NAME"
+               echo env.BRANCH_NAME
            }
        }
       stage('Deploy Code') {
