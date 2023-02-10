@@ -1,13 +1,16 @@
 pipeline {
    agent any
    stages {
-       stage('Build Code') {
+       stage('Test Code') {
            steps {
                echo env.BRANCH_NAME
            }
        }
       stage('Deploy Code') {
-          steps {
+            when {
+                branch 'master'
+            }
+            steps {
                sh """
                echo "Deploying Code"
                """
