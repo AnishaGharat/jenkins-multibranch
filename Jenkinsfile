@@ -5,7 +5,7 @@ pipeline {
            steps {
                echo env.BRANCH_NAME
            }
-       }
+         }
       stage('Deploy Code') {
          when {
                 branch 'main'
