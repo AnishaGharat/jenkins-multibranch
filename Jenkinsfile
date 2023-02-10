@@ -7,6 +7,9 @@ pipeline {
            }
        }
       stage('Deploy Code') {
+         when {
+                branch 'main'
+            }
           steps {
                sh """
                echo "Deploying Code"
