@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR_PATH=$1
+DIR_PATH="./"
 if [ ! -d "$DIR_PATH" ]; then
     echo "Directory '$DIR_PATH' not exists"
     exit 1
