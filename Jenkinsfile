@@ -3,9 +3,12 @@ pipeline {
    stages {
        stage('Git checks') {
            steps {
-               echo env.BRANCH_NAME
-               def files = getChangedFilesList()
-               echo ${files}
+                script{
+                    echo env.BRANCH_NAME
+                    def files = getChangedFilesList()
+                    echo "${files}"
+                }
+              
            }
          }
       stage('Deploy Code') {
