@@ -4,8 +4,8 @@ pipeline {
        stage('Git checks') {
            steps {
                echo env.BRANCH_NAME
-               files = getChangedFilesList()
-               echo $files
+               def files = getChangedFilesList()
+               echo ${files}
            }
          }
       stage('Deploy Code') {
