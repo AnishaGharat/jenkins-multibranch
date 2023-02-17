@@ -1,7 +1,7 @@
 pipeline {
    agent any
    stages {
-       stage('Build Code') {
+       stage('Git checks') {
            steps {
                echo env.BRANCH_NAME
            }
